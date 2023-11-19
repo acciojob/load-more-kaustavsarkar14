@@ -36,7 +36,7 @@ const items = [
 ];
 
 const App = () => {
-  const [data, setData] = useState(items.slice(0,10))
+  const [data, setData] = useState([])
   function loadData(){
     setData(items.slice(0,data.length+10))
   }
