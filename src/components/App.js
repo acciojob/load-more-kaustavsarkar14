@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useState } from "react";
 import './../styles/App.css';
 
 const items = [
@@ -36,9 +36,20 @@ const items = [
 ];
 
 const App = () => {
+  const [data, setData] = useState(items.slice(0,10))
+  function loadData(){
+    setData(items.slice(0,data.length+10))
+  }
+  console.log(data)
   return (
     <div>
         {/* Do not remove the main div */}
+      <ul>
+        {
+          data.map(el=><li>{el}</li>)
+        }
+        <button onClick={loadData} >Load More</button>
+      </ul>
     </div>
   )
 }
