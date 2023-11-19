@@ -48,8 +48,8 @@ const App = () => {
         {
           data.map(el=><li>{el}</li>)
         }
-        <button onClick={loadData} >Load More</button>
       </ul>
+        <button onClick={loadData} >Load More</button>
     </div>
   )
 }
